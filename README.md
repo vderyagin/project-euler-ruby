@@ -1,4 +1,4 @@
-My solutions (and attempts to solve) for some of
+My solutions (or solution attempts) for some of
 [Project Euler](http://projecteuler.net) problems using Ruby programming
 language.
 
