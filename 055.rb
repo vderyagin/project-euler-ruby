@@ -42,9 +42,9 @@ answer: 249
 class Integer
 
   def lychrel?
-    i = self
+    n = self
     50.times do
-      return false if (i = (i + i.reverse)).palindrome?
+      return false if (n = (n + n.reverse)).palindrome?
     end
     true
   end
@@ -59,6 +59,6 @@ class Integer
 
 end
 
-answer = (1..10_000).count &:lychrel?
+answer = (1...10_000).count &:lychrel?
 
 puts answer
