@@ -39,6 +39,6 @@ class Integer
 
 end
 
-answer = (1..1e6).max_by &:sequence_length
+answer = (1...1e6).max_by &:sequence_length
 
 puts answer
