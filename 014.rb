@@ -25,20 +25,20 @@ answer: 837799
 
 =end
 
-class Integer
+require 'set'
 
-  def sequence_length
-    i = self
-    len = 1
-    loop do
-      return len if i == 1
-      i = i.even? ? (i / 2) : (3 * i + 1)
-      len += 1
-    end
+set = Set.new
+
+answer = (1...1e6).max_by do |n|
+  next 0 if set.include? n
+  n_original = n
+  len = 1
+  until n == 1
+    n = n.even? ? (n / 2) : (3 * n + 1)
+    set << n if n > n_original
+    len += 1
   end
-
+  len
 end
-
-answer = (1...1e6).max_by &:sequence_length
 
 puts answer
